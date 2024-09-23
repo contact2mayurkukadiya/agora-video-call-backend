@@ -44,6 +44,7 @@ var generateRtmToken = function (req, resp) {
     return resp.json({ 'key': key }).send();
 };
 
+app.get('/health', (req, res) => { res.send('OK') })
 app.get('/rtcToken', generateRtcToken);
 app.get('/rtmToken', generateRtmToken);
 
